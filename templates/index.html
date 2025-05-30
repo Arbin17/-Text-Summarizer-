@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Headline Summarizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f9f9f9;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📰 Text Summarizer</h1>
+    <h2>📰 News Headlines Fetched:</h2>
+<ul>
+    {% for h in headlines %}
+        <li>{{ h }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Or enter your own text below:</h3>
+<form method="post">
+    <textarea name="text" placeholder="Paste or edit the headlines...">{{ original if original else '' }}</textarea><br>
+    <button class="btn" type="submit">Summarize</button>
+</form>
+    {% if summary %}
+    <div class="result">
+        <h3>📌 Summary:</h3>
+        <p>{{ summary }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
