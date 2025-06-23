@@ -1,45 +1,26 @@
+Project Title: RSS Headline Summarizer
 
-## requirements.txt
-fastapi
-uvicorn
-jinja2
-transformers
-torch
-python-multipart
-feedparser
+Description: This project is a web application built using FastAPI and Jinja2 templates that summarizes RSS headlines using the BART summarization model from Hugging Face's Transformers library. The application fetches headlines from a user-specified RSS feed and returns a summary of each headline.
 
-# RSS Headline Summarizer
+Features:
+- User-specified RSS feed URL
+- Limit on number of headlines displayed
+- BART summarization model for headline summarization
+- Responsive design using HTML and CSS
 
-This is a simple web application built using FastAPI, Jinja2, and Transformers libraries. It allows users to input an RSS feed URL and summarize the headlines using the BART summarization model.
+Installation:
+1. Clone the repository: `git clone https://github.com/your-username/rss-headline-summarizer.git`
+2. Navigate to the project directory: `cd rss-headline-summarizer`
+3. Install the required packages: `pip install -r requirements.txt`
 
-## Features
+Usage:
+1. Run the application: `uvicorn main:app`
+2. Open your web browser and navigate to `http://localhost:8000`
+3. Enter the URL of your RSS feed in the input field and click "Summarize Headlines"
+4. The application will fetch the headlines from the RSS feed and summarize each one using the BART model
 
-- Real-time summarization of RSS feed headlines
-- User-friendly interface with HTML templates
-- Customizable summary length
+License:
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Installation
-
-To install the required dependencies, run the following command:
-
-```
-pip install -r requirements.txt
-```
-
-## Usage
-
-To run the application, execute the following command:
-
-```
-uvicorn main:app --reload
-```
-
-Open your web browser and navigate to `http://localhost:8000`.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contact
-
-For any inquiries or feedback, please contact us at [placeholder email address].
+Contact:
+For any questions or issues, please contact the project maintainer at your-email@example.com.
