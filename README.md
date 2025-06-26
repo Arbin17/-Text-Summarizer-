@@ -1,3 +1,4 @@
+Made by ReadMe-Ai 
 Project Title: RSS Headline Summarizer
 
 Description: This project is a web application built using FastAPI and Jinja2 templates that summarizes RSS headlines using the BART summarization model from Hugging Face's Transformers library. The application fetches headlines from a user-specified RSS feed and returns a summary of each headline.
